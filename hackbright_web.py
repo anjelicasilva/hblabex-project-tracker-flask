@@ -11,7 +11,7 @@ app = Flask(__name__)
 def get_student():
     """Show information about a student."""
 
-    github = "jhacks"
+    github = request.args.get('github')
 
     first, last, github = hackbright.get_student_by_github(github)
 
